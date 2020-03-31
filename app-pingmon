@@ -3,8 +3,8 @@
 
 # crontab -e
 
-# * * * * * ~/app-pingmon/chk-conn
-# */10 * * * * ~/app-pingmon/app-pingmon ~/app-pingmon/to/list-out.txt >> ~/app-pingmon/log-out.txt
+# @reboot  ~/app-pingmon/chk-conn
+# * * * * * ~/app-pingmon/app-pingmon ~/app-pingmon/to/list-out.txt >> ~/app-pingmon/log-out.txt
 # * * * * * ~/app-pingmon/app-pingmon ~/app-pingmon/to/list-in.txt >> ~/app-pingmon/log-in.txt
 # @reboot ~/app-pingmon/chk-reboot >> ~/app-pingmon/log-reboot.txt
 
