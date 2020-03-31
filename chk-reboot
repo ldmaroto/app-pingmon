@@ -13,7 +13,7 @@ askIPADD
 
 until [[ $IPADD != "" ]]; do
    askIPADD
-   sleep 2
+   sleep 6
 done
 
 ## Gathering Gateway Address.
@@ -27,7 +27,7 @@ askGATEWAY
 
 until [[ $GATEWAY != "" ]]; do
    askGATEWAY
-   sleep 2
+   sleep 6
 done
 
 ## Gathering Time Stamp.
