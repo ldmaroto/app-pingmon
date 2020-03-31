@@ -2,7 +2,7 @@
 # PRAGRAM NAME: xxxx
 #
 
-while:
+while :
 do
    IPADD=""
 
