@@ -8,3 +8,4 @@ echo "alias report='bash ~/app-pingmon/report'" >> ~/.bash_aliases
 echo "alias viewin='bash ~/app-pingmon/viewin'" >> ~/.bash_aliases
 echo "alias viewout='bash ~/app-pingmon/viewout'" >>  ~/.bash_aliases
 echo "alias restartlog='bash ~/app-pingmon/restartlog'" >> ~/.bash_aliases
+echo "alias reboot='sudo reboot now'" >> ~/.bash_aliases
