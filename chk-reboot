@@ -1,6 +1,8 @@
 #!/bin/bash
 # PRAGRAM NAME: xxxx
 #
-
+IPADD=$(hostname -I)
+GATEWAY=$(ip r | grep default | cut -f 3- -d ' ' | cut -f 1 -d ' ')
 DATE=$(date)
-echo "Datalogger ON --> $DATE"
+
+echo "Datalogger ON (IP: $IPADD | GW: $GATEWAY) --> $DATE"
