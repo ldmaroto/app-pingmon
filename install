@@ -1,0 +1,10 @@
+#!/bin/bash
+# PRAGRAM NAME: xxxx
+#
+
+clear
+
+alias report='bash ~/app-pingmon/report'
+alias viewin='bash ~/app-pingmon/viewin'
+alias viewout='bash ~/app-pingmon/viewout'
+alias restartlog='bash ~/app-pingmon/restart'
