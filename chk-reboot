@@ -11,8 +11,7 @@ IPADD=$(hostname -I)
 
 askIPADD
 
-until [ $IPADD != "" ]; do
-   echo "  Gathering IP Address, waiting..."
+until [[ $IPADD != "" ]]; do
    askIPADD
    sleep 2
 done
@@ -26,8 +25,7 @@ GATEWAY=$(ip r | grep default | cut -f 3- -d ' ' | cut -f 1 -d ' ')
 
 askGATEWAY
 
-until [ $GATEWAY != ""]; do
-   echo "  Gathering Gateway Address, waiting..."
+until [[ $GATEWAY != "" ]]; do
    askGATEWAY
    sleep 2
 done
