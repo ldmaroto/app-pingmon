@@ -1,0 +1,7 @@
+#!/bin/bash
+# PRAGRAM NAME: xxxx
+#
+
+rm *.txt
+sudo reboot now
+
