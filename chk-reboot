@@ -1,8 +1,40 @@
 #!/bin/bash
 # PRAGRAM NAME: xxxx
 #
+
+## Gathering IP Address.
+IPADD=""
+
+function askIPADD {
 IPADD=$(hostname -I)
+}
+
+askIPADD
+
+until [ $IPADD != "" ]; do
+   echo "  Gathering IP Address, waiting..."
+   askIPADD
+   sleep 2
+done
+
+## Gathering Gateway Address.
+GATEWAY=""
+
+function askGATEWAY {
 GATEWAY=$(ip r | grep default | cut -f 3- -d ' ' | cut -f 1 -d ' ')
+}
+
+askGATEWAY
+
+until [ $GATEWAY != ""]; do
+   echo "  Gathering Gateway Address, waiting..."
+   askGATEWAY
+   sleep 2
+done
+
+## Gathering Time Stamp.
 DATE=$(date)
 
+
+## Present information.
 echo "Datalogger ON (IP: $IPADD | GW: $GATEWAY) --> $DATE"
