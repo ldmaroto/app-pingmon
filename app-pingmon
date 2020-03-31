@@ -5,6 +5,10 @@
 # */30 * * * * ~/app-pingmon/app-pingmon ~/app-pingmon/to/list-out.txt >> ~/app-pingmon/log-out.txt
 # * * * * * ~/app-pingmon/app-pingmon ~/app-pingmon/to/list-in.txt >> ~/app-pingmon/log-in.txt
 # /etc/init.d/cron reload
+# lias reporte='bash ~/app-pingmon/report'
+# alias ver1='bash ~/app-pingmon/viewin'
+# alias ver2='bash ~/app-pingmon/viewout'
+# nano ~/.bash_aliases
 
 cat $1 | while read output
 do
