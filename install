@@ -4,7 +4,7 @@
 
 clear
 
-alias report='bash ~/app-pingmon/report'
-alias viewin='bash ~/app-pingmon/viewin'
-alias viewout='bash ~/app-pingmon/viewout'
-alias restartlog='bash ~/app-pingmon/restart'
+echo "alias report='bash ~/app-pingmon/report'" >> ~/.bash_aliases
+echo "alias viewin='bash ~/app-pingmon/viewin'" >> ~/.bash_aliases
+echo "alias viewout='bash ~/app-pingmon/viewout'" >>  ~/.bash_aliases
+echo "alias restartlog='bash ~/app-pingmon/restart'" >> ~/.bash_aliases
