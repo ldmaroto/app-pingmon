@@ -1,0 +1,6 @@
+#!/bin/bash
+# PRAGRAM NAME: xxxx
+#
+
+DATE=$(date)
+echo "Datalogger ON --> $DATE"

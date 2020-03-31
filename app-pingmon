@@ -4,6 +4,7 @@
 # crontab -e
 # */30 * * * * ~/app-pingmon/app-pingmon ~/app-pingmon/to/list-out.txt >> ~/app-pingmon/log-out.txt
 # * * * * * ~/app-pingmon/app-pingmon ~/app-pingmon/to/list-in.txt >> ~/app-pingmon/log-in.txt
+# @reboot ~/app-pingmon/chk-reboot >> ~/app-pingmon/log-reboot.txt
 # /etc/init.d/cron reload
 # lias reporte='bash ~/app-pingmon/report'
 # alias ver1='bash ~/app-pingmon/viewin'
