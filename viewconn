@@ -1,0 +1,21 @@
+!/bin/bash
+# PRAGRAM NAME: chk-ipout.sh
+
+clear
+FILE=./log-conn.txt
+
+if [ -f "$FILE" ]; then
+{
+echo "GRIDGER: Monitoring Ethernet Connection."
+echo "(Press Ctr-C to exit...)"
+echo "#########################################################"
+tail -f $FILE
+}
+else
+{
+echo "GRIDGER: Monitoring Ethernet Connection."
+echo "#########################################################"
+echo "Log file does not exist !!!"
+echo
+}
+fi
