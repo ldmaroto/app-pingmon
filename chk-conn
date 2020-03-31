@@ -2,6 +2,8 @@
 # PRAGRAM NAME: xxxx
 #
 
+sleep 20
+
 while :
 do
    IPADD=""
@@ -14,7 +16,7 @@ do
 
    until [[ $IPADD != "" ]]; do
       DATE=$(date)
-      echo "Datalogger is not connected --> $DATE" >> log-conn.txt
+      echo "Datalogger is not connected --> $DATE" >> ~/app-pingmon/log-conn.txt
       sleep 6
       askIPADD
    done
