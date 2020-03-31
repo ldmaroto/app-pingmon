@@ -2,24 +2,16 @@
 # PRAGRAM NAME: xxxx
 #
 
-sleep 20
+IPADD=""
 
-while :
-do
-   IPADD=""
+function askIPADD {
+IPADD=$(hostname -I)
+}
 
-   function askIPADD {
-   IPADD=$(hostname -I)
-   }
+askIPADD
 
-   askIPADD
-
-   until [[ $IPADD != "" ]]; do
-      DATE=$(date)
-      echo "Datalogger is not connected --> $DATE" >> ~/app-pingmon/log-conn.txt
-      sleep 6
-      askIPADD
-   done
-
-   sleep 6
-done
+if [[ $IPADD == "" ]]
+then
+   DATE=$(date)
+   echo "Datalogger is not connected --> $DATE" >> ~/app-pingmon/log-conn.txt
+fi
