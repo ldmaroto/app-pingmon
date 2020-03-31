@@ -1,0 +1,56 @@
+#!/bin/bash
+# PRAGRAM NAME: xxxx
+#
+
+clear
+
+LISTEXT=~/app-pingmon/to/list-out.txt
+LISTINT=~/app-pingmon/to/list-in.txt
+LOGINT=~/app-pingmon/log-in.txt
+LOGEXT=~/app-pingmon/log-out.txt
+IPADD=$(hostname -I)
+GATEWAY=$(ip r | grep default | cut -f 3- -d ' ' | cut -f 1 -d ' ')
+
+echo "GRIDGER: IP Addresses Report"
+echo "#########################################################"
+
+echo ""
+echo "IP Address: $IPADD"
+echo "GATEWAY: $GATEWAY"
+
+echo ""
+echo "External Hosts: "
+if [ -f "$LISTEXT" ]; then 
+{
+if [ -f "$LOGEXT" ]; then
+{
+cat $LISTEXT | while read output
+do
+    # echo $output
+    COUNT=$(cat $LOGEXT | grep $output | wc -l)
+    echo "  node $output is out: $COUNT times"
+done
+echo ""
+} else echo "* There is not report, yet." 
+fi
+} else echo "* Error: List-out.txt file does not exist !!!"
+fi
+
+echo ""
+echo "Internal Hosts: "
+if [ -f "$LISTINT" ]; then
+{
+if [ -f "$LOGINT" ]; then
+{
+cat $LISTINT | while read output
+do
+    # echo $output
+    COUNT=$(cat $LOGINT | grep $output | wc -l)
+    echo "  node $output is out: $COUNT times"
+done
+echo ""
+} else echo "* There is not report, yet."
+fi
+} else echo "* Error: List-in.txt file does not exist !!!"
+fi
+echo ""

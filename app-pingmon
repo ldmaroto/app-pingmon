@@ -1,0 +1,16 @@
+#!/bin/bash
+# PRAGRAM NAME: app-pingmon
+
+# crontab -e
+# */30 * * * * ~/app-pingmon/app-pingmon ~/app-pingmon/to/list-out.txt >> ~/app-pingmon/log-out.txt
+# * * * * * ~/app-pingmon/app-pingmon ~/app-pingmon/to/list-in.txt >> ~/app-pingmon/log-in.txt
+# /etc/init.d/cron reload
+
+cat $1 | while read output
+do
+    ping -c 1 "$output" > /dev/null
+    if [ $? -eq 1 ]; then
+    DATE=$(date)
+    echo "node $output is down --> $DATE" 
+    fi
+done

@@ -1,0 +1,22 @@
+!/bin/bash
+# PRAGRAM NAME: chk-ipin.sh
+
+clear
+FILE=./log-in.txt
+
+if [ -f "$FILE" ]; then
+{
+echo "GRIDGER: Monitoring Internal IP Addresses"
+echo "(Press Ctr-C to exit...)"
+echo "#########################################################"
+tail -f $FILE
+
+}
+else
+{
+echo "GRIDGER: Monitoring Internal IP Addresses"
+echo "#########################################################"
+echo "Log file does not exist !!!"
+echo
+}
+fi
