@@ -2,6 +2,6 @@
 # PRAGRAM NAME: xxxx
 #
 
-rm *.txt
+rm ~/app-pingmon/*.txt
 sudo reboot now
 
