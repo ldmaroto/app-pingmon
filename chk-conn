@@ -1,0 +1,23 @@
+#!/bin/bash
+# PRAGRAM NAME: xxxx
+#
+
+while:
+do
+   IPADD=""
+
+   function askIPADD {
+   IPADD=$(hostname -I)
+   }
+
+   askIPADD
+
+   until [[ $IPADD != "" ]]; do
+      DATE=$(date)
+      echo "Datalogger is not connected --> $DATE" >> log-conn.txt
+      sleep 6
+      askIPADD
+   done
+
+   sleep 6
+done
