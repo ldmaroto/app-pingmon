@@ -2,7 +2,7 @@
 # PRAGRAM NAME: chk-ipout.sh
 
 clear
-FILE=./log-conn.txt
+FILE=~/app-pingmon/log-conn.txt
 
 if [ -f "$FILE" ]; then
 {

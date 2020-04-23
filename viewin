@@ -2,7 +2,7 @@
 # PRAGRAM NAME: chk-ipin.sh
 
 clear
-FILE=./log-in.txt
+FILE=~/app-pingmon/log-in.txt
 
 if [ -f "$FILE" ]; then
 {
